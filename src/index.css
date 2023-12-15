@@ -4,7 +4,23 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
   font-family: "Nunito Sans", sans-serif;
+}
+
+.nav-link {
+  @apply h-10 w-auto px-3 active:scale-95 transition-transform flex items-center justify-center rounded-full capitalize hover:bg-accent-1 dark:hover:bg-slate-700 text-slate-700 aria-[current=page]:bg-sky-100 dark:aria-[current=page]:bg-slate-800 dark:aria-[current=page]:text-sky-500 aria-[current=page]:text-sky-600 font-semibold dark:text-white;
+}
+
+.icon-button {
+  @apply ml-6 hover:bg-accent-1 w-10 h-10 flex items-center justify-center rounded-full active:scale-95 transition-transform dark:hover:bg-slate-700;
 }
