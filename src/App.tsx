@@ -15,11 +15,11 @@ const App: FC<JSX.IntrinsicElements["main"]> = () => {
 
   useEffect(() => {
     if (theme === "dark") {
-      document.documentElement.classList.toggle("dark");
-      document.documentElement.classList.toggle("light");
+      document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
     } else {
-      document.documentElement.classList.toggle("dark");
-      document.documentElement.classList.toggle("light");
+      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
     }
   }, [theme]);
 

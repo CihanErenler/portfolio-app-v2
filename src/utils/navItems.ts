@@ -8,6 +8,10 @@ const navItems = [
     path: "/projects",
   },
   {
+    name: "resume",
+    path: "/resume",
+  },
+  {
     name: "contact",
     path: "contact",
   },

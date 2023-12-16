@@ -1,13 +1,9 @@
 import { FC } from "react";
 import navItems from "../../utils/navItems";
-import logo from "../../assets/logo.png";
 import { NavLink } from "react-router-dom";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
-
-type NavbarType = {
-  setTheme: React.Dispatch<React.SetStateAction<string | null>>;
-  theme: null | string;
-};
+import { FaLinkedin, FaGithub } from "react-icons/fa6";
+import { NavbarType } from "../../@types/componentTypes";
 
 const Navbar: FC<NavbarType & JSX.IntrinsicElements["nav"]> = ({
   theme,
@@ -21,10 +17,26 @@ const Navbar: FC<NavbarType & JSX.IntrinsicElements["nav"]> = ({
 
   return (
     <nav className="flex items-center justify-between px-8 h-14 bg-white w-screen dark:bg-zinc-900">
-      <section>
-        <NavLink to="/">
-          <img className="w-11" src={logo} alt="logo" />
-        </NavLink>
+      <section className="flex items-center gap-2">
+        <a
+          className="icon-button"
+          href="https://www.linkedin.com/in/cihanerenler/"
+        >
+          <FaLinkedin
+            size={20}
+            color={`${theme === "dark" ? "#fff" : "#334155"}`}
+          />
+        </a>
+        <a
+          className="icon-button"
+          href="https://github.com/CihanErenler"
+          target="_blank"
+        >
+          <FaGithub
+            size={20}
+            color={`${theme === "dark" ? "#fff" : "#334155"}`}
+          />
+        </a>
       </section>
       <section className="flex gap-2">
         {navItems.map((navItem) => (
@@ -32,11 +44,11 @@ const Navbar: FC<NavbarType & JSX.IntrinsicElements["nav"]> = ({
             {navItem.name}
           </NavLink>
         ))}
-        <button className="icon-button" onClick={handleThemeToggle}>
+        <button className="icon-button ml-6" onClick={handleThemeToggle}>
           {theme === "dark" ? (
             <MdOutlineLightMode size={22} color="#fff" />
           ) : (
-            <MdOutlineDarkMode size={22} />
+            <MdOutlineDarkMode size={22} color="#334155" />
           )}
         </button>
       </section>
