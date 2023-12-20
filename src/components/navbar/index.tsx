@@ -16,7 +16,7 @@ const Navbar: FC<NavbarType & JSX.IntrinsicElements["nav"]> = ({
   };
 
   return (
-    <nav className="flex items-center justify-between px-8 h-14 bg-white w-screen dark:bg-zinc-900">
+    <nav className="flex items-center justify-between px-8 h-14 bg-white w-screen dark:bg-zinc-900 sticky top-0 z-50 border-b border-b-slate-200">
       <section className="flex items-center gap-2">
         <a
           className="icon-button"

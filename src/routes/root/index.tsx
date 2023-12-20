@@ -1,12 +1,12 @@
 import { FC } from "react";
-import { Hero, Projects, Skills } from "../../components";
+import { Hero, FeaturedProjets, Skills } from "../../components";
 
 const Root: FC<JSX.IntrinsicElements["section"]> = () => {
   return (
     <section>
       <Hero />
       <Skills />
-      <Projects />
+      <FeaturedProjets />
     </section>
   );
 };

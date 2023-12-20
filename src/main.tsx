@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Root } from "./routes";
-import { NotFound, Projects, Contact, Resume } from "./routes";
+import { NotFound, Projects, Contact, Resume, SingleProject } from "./routes";
 import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
@@ -19,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/projects",
         element: <Projects />,
+      },
+      {
+        path: "/projects/:id",
+        element: <SingleProject />,
       },
       {
         path: "/contact",

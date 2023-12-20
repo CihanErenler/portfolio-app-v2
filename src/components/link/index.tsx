@@ -7,7 +7,7 @@ const CustomLink: FC<CustomLinkType & JSX.IntrinsicElements["a"]> = ({
   children,
 }) => {
   return (
-    <Link className="text-sky-600" to={to}>
+    <Link className="text-blue-600" to={to}>
       {children}
     </Link>
   );

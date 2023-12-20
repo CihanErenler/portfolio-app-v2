@@ -16,7 +16,7 @@ body {
 }
 
 .nav-link {
-  @apply h-10 w-auto px-3 active:scale-95 transition-transform flex items-center justify-center rounded-full capitalize hover:bg-accent-1 dark:hover:bg-slate-700 text-slate-700 aria-[current=page]:bg-sky-100 dark:aria-[current=page]:bg-slate-800 dark:aria-[current=page]:text-sky-500 aria-[current=page]:text-sky-600 font-semibold dark:text-white;
+  @apply h-10 w-auto px-3 active:scale-95 transition-transform flex items-center justify-center rounded-full capitalize hover:bg-accent-1 dark:hover:bg-slate-700 text-slate-700 aria-[current=page]:bg-blue-100 dark:aria-[current=page]:bg-slate-800 dark:aria-[current=page]:text-blue-500 aria-[current=page]:text-blue-600 font-semibold dark:text-white;
 }
 
 .icon-button {
@@ -24,5 +24,5 @@ body {
 }
 
 .btn {
-  @apply w-[150px] bg-sky-500 text-white hover:bg-sky-800 rounded-full h-12 text-lg font-semibold flex items-center justify-center px-5 transition-all cursor-pointer active:scale-95;
+  @apply min-w-[150px] max-w-[200px] bg-blue-500 text-white hover:bg-sky-800 rounded-full h-12 text-lg font-semibold flex items-center justify-center px-5 transition-all cursor-pointer active:scale-95;
 }
