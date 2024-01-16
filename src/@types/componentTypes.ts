@@ -80,6 +80,8 @@ export type ResumeSectionType = {
 export type AppContextType = {
   theme: string | null;
   setTheme: React.Dispatch<React.SetStateAction<string | null>>;
+  showNav: boolean;
+  setShowNav: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 export type AppProviderType = { children: React.ReactNode };

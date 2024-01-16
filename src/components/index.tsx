@@ -18,6 +18,7 @@ import ResumeSection from "./resume-section";
 import ResumeTitle from "./resume-title";
 import SocialMedia from "./social-media";
 import ContactForm from "./contact-form";
+import SmallNav from "./small-nav";
 
 export {
   Navbar,
@@ -40,4 +41,5 @@ export {
   ResumeSection,
   SocialMedia,
   ContactForm,
+  SmallNav,
 };

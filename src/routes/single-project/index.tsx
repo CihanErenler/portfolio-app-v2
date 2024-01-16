@@ -17,7 +17,6 @@ const SingleProject: FC<JSX.IntrinsicElements["main"]> = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    console.log(id);
     const project: ProjectType = projects.find(
       (project) => project.id === +id!
     )!;

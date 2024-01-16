@@ -8,7 +8,6 @@ const ProjectCard: FC<ProjectCardType> = ({ id, title, desc, image, tags }) => {
   const navigate = useNavigate();
 
   const handleNavigation = () => {
-    console.log("id ===> ", id);
     const url = `/projects/${id}`;
     navigate(url);
   };

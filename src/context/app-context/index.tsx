@@ -5,6 +5,7 @@ export const AppContext = createContext<AppContextType | null>(null);
 
 export const AppProvider = ({ children }: AppProviderType) => {
   const [theme, setTheme] = useState<string | null>(null);
+  const [showNav, setShowNav] = useState<boolean>(false);
 
   useEffect(() => {
     if (window.matchMedia("(prefer-color-scheme: dark)").matches) {
@@ -25,7 +26,7 @@ export const AppProvider = ({ children }: AppProviderType) => {
   }, [theme]);
 
   return (
-    <AppContext.Provider value={{ theme, setTheme }}>
+    <AppContext.Provider value={{ theme, setTheme, showNav, setShowNav }}>
       {children}
     </AppContext.Provider>
   );
