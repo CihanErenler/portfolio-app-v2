@@ -93,7 +93,7 @@ const cv = {
     phone: "+358 40 753 7438",
     email: "cihanerenler@outlook.com",
     website: "www.cihanerenler.com",
-    linkedin: "linkedin.com/in/cihanerenler",
+    linkedin: "https://linkedin.com/in/cihanerenler",
     github: "https://github.com/CihanErenler",
   },
 };

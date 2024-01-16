@@ -52,7 +52,7 @@ const Resume: FC<JSX.IntrinsicElements["main"]> = () => {
                 <IoLogoLinkedin size={26} color="#fff" /> {cv.contact.linkedin}
               </a>
               <a
-                href={cv.contact.linkedin}
+                href={cv.contact.github}
                 className="flex items-center justify-start gap-2 text-slate-400"
                 target="_blank"
               >
