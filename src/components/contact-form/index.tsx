@@ -35,7 +35,12 @@ const ContactForm: FC<JSX.IntrinsicElements["form"]> = () => {
         },
         body: encode({ "form-name": "contact", email, name, message }),
       })
-        .then(() => alert("Success!"))
+        .then(() => {
+          alert("Success!");
+          setEmail("");
+          setName("");
+          setMessage("");
+        })
         .catch((error) => alert(error));
     } else {
       throw new Error("Something went wrong");
