@@ -1,7 +1,9 @@
+import cihan from "../assets/images/cihan-image.png";
+
 const cv = {
   name: "Cihan Erenler",
   title: "Junior Software Developer",
-  image: "/src/assets/images/cihan-image.png",
+  image: cihan,
   about:
     "I am a highly motivated software developer with experience in front-end and back-end development. I have worked as a trainee at two reputable companies, gaining valuable industry experience and honing my skills in programming languages and frameworks such as Javascript, TypeScript, React.js, and Node.js. I am a team player with strong communication and problem-solving skills, always eager to learn new technologies and make a meaningful contribution to the team.",
   workExperience: [
