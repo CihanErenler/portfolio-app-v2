@@ -4,6 +4,7 @@ import { Root } from "./routes";
 import { NotFound, Projects, Contact, Resume, SingleProject } from "./routes";
 import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { AppProvider } from "./context/app-context/index.tsx";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -17,12 +18,12 @@ const router = createBrowserRouter([
         element: <Root />,
       },
       {
-        path: "/projects",
-        element: <Projects />,
-      },
-      {
         path: "/projects/:id",
         element: <SingleProject />,
+      },
+      {
+        path: "/projects",
+        element: <Projects />,
       },
       {
         path: "/contact",
@@ -38,6 +39,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AppProvider>
+      <RouterProvider router={router} />
+    </AppProvider>
   </React.StrictMode>
 );

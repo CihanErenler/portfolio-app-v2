@@ -6,16 +6,46 @@ const Button: FC<ButtonType & JSX.IntrinsicElements["button"]> = ({
   children,
   action,
   to,
+  href,
+  download,
+  type,
+  full,
 }) => {
-  if (to) {
+  if (href) {
     return (
-      <Link to={to} className="btn" onClick={action}>
+      <a className={`btn ${full ? "full" : ""}`} href={href} target="_blank">
+        {children}
+      </a>
+    );
+  }
+
+  if (download && to) {
+    return (
+      <Link
+        to={to}
+        className={`btn ${full ? "full" : ""}`}
+        target="_blank"
+        download
+      >
         {children}
       </Link>
     );
   }
+
+  if (to) {
+    return (
+      <Link to={to} className={`btn ${full ? "full" : ""}`} onClick={action}>
+        {children}
+      </Link>
+    );
+  }
+
   return (
-    <button className="btn" onClick={action}>
+    <button
+      className={`btn ${full ? "full" : ""}`}
+      onClick={action}
+      type={type ? type : "button"}
+    >
       {children}
     </button>
   );
