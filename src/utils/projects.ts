@@ -1,9 +1,9 @@
 import portfolioApp from "../assets/images/portfolio-app.jpg";
-import ecommerce from "../assets/images/e-commerce.jpg";
 import hero from "../assets/images/hero.png";
 import project4 from "../assets/images/project-4.png";
 import project2 from "../assets/images/project-2.jpg";
 import project3 from "../assets/images/project-3.jpg";
+import garage35 from "../assets/images/garage35.png";
 
 const projects = [
   {
@@ -25,26 +25,35 @@ const projects = [
   },
   {
     id: 1,
-    title: "E-commerce Website",
-    desc: "The E-commerce Website project involves the development of an online shopping platform where users can filter available products based on various criteria such as brand, color, and price. Users can also preview individual products and add them to the shopping cart.",
-    image: ecommerce,
-    github: "https://github.com/CihanErenler/react-e-commerce",
-    preview: "https://hanci.netlify.app/",
-    tags: ["React", "Tailwind Css", "React Router", "Axios", "React Icons"],
+    title: "Car Dealer Website",
+    desc: "The Car Dealer Website project involves the development of an online platform where users can browse available cars and view details of each car. Users can also filter available cars based on various criteria such as brand, model, and price. Users can also preview individual cars and add them to the shopping cart.",
+    image: garage35,
+    github: "https://github.com/CihanErenler/Garage35",
+    preview: "https://garage35.fi/",
+    tags: [
+      "React",
+      "Tailwind CSS",
+      "React Router",
+      "Axios",
+      "React Icons",
+      "Node.js",
+      "Express",
+    ],
     filter: ["React", "React Router", "Axios", "External API"],
     technologies: [
       "React",
       "Tailwind CSS",
       "React Router",
       "Axios",
-      "React Icons",
+      "Node.js",
+      "Express",
     ],
     background:
-      "The project originated from the need to create a user-friendly and functional e-commerce website that allows users to easily browse and purchase products online.",
+      "The project originated from the need to create a user-friendly and functional car dealer website that allows users to easily browse and purchase cars online.",
     challenges:
-      "The primary challenges included implementing effective product filtering and integrating a seamless shopping cart functionality.",
+      "The primary challenges included implementing effective car filtering and integrating a with a backend server to store car data.",
     actionsOutcomes:
-      "To overcome these challenges, I utilized React, Tailwind CSS, and Axios. The completed project is available on GitHub  and live on Netlify.",
+      "To overcome these challenges, I utilized React, Tailwind CSS, Node.js, and Express. I created a proxy server to handle the API requests.",
   },
   {
     id: 2,
