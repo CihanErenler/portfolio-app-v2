@@ -14,11 +14,11 @@ const Hero: FC<JSX.IntrinsicElements["section"]> = () => {
               alt="profile photo"
             />
           </div>
-          <div className="flex-1 p-5 h-full text-slate-600 flex flex-col items-center justify-center">
+          <div className="flex-1 p-5 h-full text-slate-700 flex flex-col items-center justify-center">
             <h4 className="md:text-2xl text-xl mb-3 dark:text-slate-400">
               Hello, my name is
             </h4>
-            <h1 className="md:text-5xl text-3xl font-extrabold mb-3 text-slate-600 dark:text-white">
+            <h1 className="md:text-5xl text-3xl font-extrabold mb-3 text-slate-800 dark:text-white">
               Cihan Erenler
             </h1>
             <p className="text-md mb-5 md:text-lg text-md font-light w-2/3 m-auto text-center dark:text-slate-400">
