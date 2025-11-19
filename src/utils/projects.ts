@@ -1,18 +1,17 @@
 import portfolioApp from "../assets/images/portfolio-app.jpg";
 import hero from "../assets/images/hero.png";
+import chatbot from "../assets/images/chatbot.png";
 import project4 from "../assets/images/project-4.png";
 import project2 from "../assets/images/project-2.jpg";
-import project3 from "../assets/images/project-3.jpg";
 import garage35 from "../assets/images/garage35.png";
 
 const projects = [
   {
     id: 0,
     title: "AI Portfolio Chatbot",
-    desc: "An AI-powered chat widget embedded into my portfolio that lets visitors ask questions about me, my skills, and my projects in a conversational way.",
-    image: hero, // update the import/variable name as needed
-    github: "https://github.com/CihanErenler/portfolio-ai-chatbot-app", // update if different
-    preview: "https://your-domain-or-subdomain-here.com", // replace with the live URL
+    desc: "An AI-powered chat widget embedded into my portfolio that lets visitors ask questions about me, my skills, and my projects in a conversational way. You can see it in the bottom right corner of the page.",
+    image: chatbot,
+    github: "https://github.com/CihanErenler/portfolio-ai-chatbot-app",
     tags: ["Node.js", "Express", "PostgreSQL", "pgvector", "OpenAI", "Vite"],
     filter: ["Node.js", "Express", "PostgreSQL"],
     technologies: [
@@ -129,23 +128,6 @@ const projects = [
       "A significant challenge was developing a tool that efficiently generates color variations and allows users to copy the generated colors seamlessly.",
     actionsOutcomes:
       "To address these challenges, I employed React, CSS, React Color, and React Icons. The completed project is available on GitHub and live on Netlify.",
-  },
-  {
-    id: 6,
-    title: "Weather App",
-    desc: "The Weather App is designed to allow users to search for real-time weather conditions in different cities. Users can retrieve information such as temperature, humidity, and pressure.",
-    image: project3,
-    github: "https://github.com/CihanErenler/weatherApp",
-    preview: "https://cihanweatherapp.netlify.app/",
-    tags: ["Javascript", "CSS"],
-    filter: ["JavaScript", "External API"],
-    technologies: ["JavaScript", "CSS"],
-    background:
-      "The motivation behind this project was to create a user-friendly application that provides real-time weather information for users searching in various cities.",
-    challenges:
-      "The primary challenge was integrating weather data effectively and designing a simple yet informative user interface.",
-    actionsOutcomes:
-      "To overcome these challenges, I employed JavaScript and CSS. The completed project is available on GitHub  and live on Netlify.",
   },
 ];
 

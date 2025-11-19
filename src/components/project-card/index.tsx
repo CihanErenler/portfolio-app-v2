@@ -26,7 +26,7 @@ const ProjectCard: FC<ProjectCardType> = ({ id, title, desc, image, tags }) => {
         className="h-[250px] relative overflow-hidden group cursor-pointer"
         onClick={handleNavigation}
       >
-        <div className="bg-slate-600 absolute w-full h-full top-0 left-0 opacity-30 hover:opacity-0 transition-all duration-300"></div>
+        {/* <div className="bg-slate-600 absolute w-full h-full top-0 left-0 opacity-30 hover:opacity-0 transition-all duration-300"></div> */}
         <div className="absolute w-full h-full -bottom-[250px] l-0 p-5 text-white bg-blue-500/90 dark:bg-blue-950/90  peer-hover:bottom-0 group-hover:bottom-0 transition-all duration-300">
           <h3 className="font-bold text-lg mb-2">Description</h3>
           <p className="font-light">{desc}</p>

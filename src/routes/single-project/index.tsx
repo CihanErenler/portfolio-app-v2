@@ -48,10 +48,12 @@ const SingleProject: FC<JSX.IntrinsicElements["main"]> = () => {
         </div>
         <Paragraph>{project.desc}</Paragraph>
         <div className="flex gap-5 py-3">
-          <Button href={project.preview}>
-            <LuExternalLink size={20} />
-            <span className="pl-2">Preview Live</span>
-          </Button>
+          {project.preview && (
+            <Button href={project.preview}>
+              <LuExternalLink size={20} />
+              <span className="pl-2">Preview Live</span>
+            </Button>
+          )}
           <Button href={project.github}>
             <LuGithub size={20} />
             <span className="pl-2">Github</span>

@@ -45,7 +45,7 @@ export type ProjectType = {
   desc: string;
   image: string;
   github: string;
-  preview: string;
+  preview?: string;
   tags: string[];
   filter: string[];
   background: string;

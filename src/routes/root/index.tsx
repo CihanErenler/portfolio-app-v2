@@ -6,11 +6,11 @@ const Root: FC<JSX.IntrinsicElements["section"]> = () => {
   return (
     <section>
       <Hero />
-      <Skills />
       <ProjectPreview
         title="Featured Projects"
         projects={projects.slice(0, 3)}
       />
+      <Skills />
     </section>
   );
 };

@@ -10,7 +10,11 @@ const ProjectPreview: FC<
       <Title>{title}</Title>
       <div className="block p-2 lg:p-8 gap-5 lg:flex">
         {projects.map((project) => (
-          <ProjectCard key={project.id} {...project} />
+          <ProjectCard
+            key={project.id}
+            {...project}
+            preview={project.preview || ""}
+          />
         ))}
       </div>
       <div className="flex items-center justify-center pt-8">
