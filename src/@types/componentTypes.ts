@@ -51,6 +51,7 @@ export type ProjectType = {
   background: string;
   challenges: string;
   actionsOutcomes: string;
+  technologies: string[];
 };
 
 export type TagType = {
