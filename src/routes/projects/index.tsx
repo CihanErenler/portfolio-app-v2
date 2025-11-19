@@ -38,7 +38,11 @@ const Projects: FC<JSX.IntrinsicElements["main"]> = () => {
       <div className="lg:grid grid-cols-3 p-8 gap-5 block">
         <AnimatePresence>
           {itemsToShow.map((project) => (
-            <ProjectCard key={project.id} {...project} />
+            <ProjectCard
+              key={project.id}
+              {...project}
+              preview={project.preview || ""}
+            />
           ))}
         </AnimatePresence>
       </div>
