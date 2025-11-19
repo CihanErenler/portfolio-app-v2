@@ -61,7 +61,7 @@ const SingleProject: FC<JSX.IntrinsicElements["main"]> = () => {
         <Paragraph>{project.background}</Paragraph>
         <div className="bg-blue-100 rounded-lg p-5 dark:bg-dark-2">
           <Paragraph>Technologies used:</Paragraph>
-          {project.filter.map((item) => {
+          {project.technologies?.map((item) => {
             return (
               <div
                 key={item}

@@ -1,0 +1,313 @@
+{
+  "personalInformation": {
+    "name": "Cihan Erenler",
+    "title": "Front-End Engineer",
+    "professionalSummary": "I am a highly motivated software developer with experience in front-end and back-end development. I have worked as a trainee at two reputable companies, gaining valuable industry experience and honing my skills in programming languages and frameworks such as Javascript, TypeScript, React.js, and Node.js. I am a team player with strong communication and problem-solving skills, always eager to learn new technologies and make a meaningful contribution to the team.",
+    "heroDescription": "I'm a full-stack developer specialised in frontend and backend development for complex scalable web apps.",
+    "website": "www.cihanerenler.com",
+    "portfolioUrl": "https://hanci.netlify.app/"
+  },
+  "contactInformation": {
+    "email": "cihanerenler@outlook.com",
+    "phone": "+358 40 753 7438",
+    "linkedin": "https://linkedin.com/in/cihanerenler",
+    "github": "https://github.com/CihanErenler",
+    "website": "www.cihanerenler.com"
+  },
+  "workExperience": [
+    {
+      "position": "Front-End Engineer",
+      "company": "SSH Secure Collaboration",
+      "date": "March 2024 - Current",
+      "responsibilities": [
+        "Developing Web Client with React.js",
+        "Developing and maintaining iOS application",
+        "Testing and debugging applications"
+      ]
+    },
+    {
+      "position": "Software Developer Trainee",
+      "company": "Nokia",
+      "date": "May 2022 - Nov 2023",
+      "responsibilities": [
+        "Developing UI components with React.js",
+        "Developing backend server with Node.js and Express",
+        "Testing backend & front-end applications"
+      ]
+    },
+    {
+      "position": "Front-End Developer Trainee",
+      "company": "F-Secure",
+      "date": "May 2021 - Dec 2021",
+      "responsibilities": [
+        "Improving and debugging design system components",
+        "Developing components with Vue.js and SCSS",
+        "Testing UI components"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Computer Applications",
+      "university": "Hame University of Applied Sciences - Finland",
+      "date": "2020 - Current"
+    },
+    {
+      "degree": "Bachelor of Art Teaching",
+      "university": "Cukurova University - Turkey",
+      "date": "2013 - 2016"
+    }
+  ],
+  "technicalSkills": {
+    "frontend": [
+      "React",
+      "TypeScript",
+      "Javascript",
+      "HTML, CSS, SCSS",
+      "Tailwind CSS"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "PostgresSQL / MySQL / MariaDB",
+      "MongoDB"
+    ],
+    "testing": ["Jest", "React Testing Library", "Cypress"],
+    "design": ["Figma", "UI Design"],
+    "additionalTechnologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React.js",
+      "Node.js & Express",
+      "Cypress",
+      "Jest",
+      "React Testing Library",
+      "React Native",
+      "Vue.js",
+      "Sass",
+      "Bootstrap",
+      "Tailwind CSS"
+    ],
+    "familiarWith": [
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Java",
+      "UI Design",
+      "Figma"
+    ]
+  },
+  "softSkills": [
+    "Strong problem-solving skills",
+    "Strong attention to detail",
+    "Adaptability to new technologies",
+    "Excellent communication",
+    "Technical and creative abilities",
+    "Ability to work under pressure"
+  ],
+  "languageSkills": {
+    "english": "C1",
+    "finnish": "A2",
+    "turkish": "Native"
+  },
+  "projects": [
+    {
+      "id": 0,
+      "title": "AI Portfolio Chatbot",
+      "description": "An AI-powered chat widget embedded into my portfolio that lets visitors ask questions about me, my skills, and my projects in a conversational way.",
+      "github": "https://github.com/CihanErenler/portfolio-ai-chatbot-app",
+      "preview": "https://your-domain-or-subdomain-here.com",
+      "technologies": [
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "pgvector",
+        "OpenAI",
+        "Vite"
+      ],
+      "tags": [
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "pgvector",
+        "OpenAI",
+        "Vite"
+      ],
+      "background": "I wanted a more interactive way for visitors to explore my portfolio and, at the same time, showcase that I can build and deploy real-world AI applications. The idea was to create an AI assistant that knows my background, skills, and projects and can be embedded as a chat widget on any website.",
+      "challenges": "The main challenges were setting up a production-like environment on a Hetzner server, configuring PostgreSQL with the pgvector extension for vector search, and wiring up a secure SSH-based workflow from my local machine. On top of that, I needed a clean way to expose the chatbot as an embeddable iframe without overcomplicating the architecture.",
+      "outcomes": "I built a Node.js + Express backend that stores my portfolio data as vector embeddings in PostgreSQL using pgvector and performs RAG-style retrieval for each user question. The chat UI is a small Vite-powered frontend that runs inside an iframe, and I expose a simple embed script so it can be dropped into any page with a single <script> tag. The result is a fast, always-on AI assistant that demonstrates both my full-stack skills and my experience with AI tooling."
+    },
+    {
+      "id": 1,
+      "title": "Portfolio Website",
+      "description": "This project involves the creation of my personal website, which you are currently exploring. The primary goal is to provide visitors with information about me and showcase various projects I have worked on.",
+      "github": "https://github.com/CihanErenler/portfolio-app-v2",
+      "preview": "https://hanci.netlify.app/",
+      "technologies": ["TypeScript", "React", "Tailwind CSS", "React Router"],
+      "tags": ["TypeScript", "React", "Tailwind CSS", "React Router"],
+      "background": "The background of this project lies in the need for a centralized platform to present my professional portfolio, skills, and completed projects.",
+      "challenges": "One of the major challenges faced during the development of the portfolio website was designing an engaging and informative layout that effectively represents my skills and projects.",
+      "outcomes": "To address this, I utilized TypeScript, React, and Tailwind CSS to implement a responsive and visually appealing design. The completed project is available on GitHub and live on Netlify."
+    },
+    {
+      "id": 2,
+      "title": "Car Dealer Website",
+      "description": "The Car Dealer Website project involves the development of an online platform where users can browse available cars and view details of each car. Users can also filter available cars based on various criteria such as brand, model, and price. Users can also preview individual cars and add them to the shopping cart.",
+      "github": "https://github.com/CihanErenler/Garage35",
+      "preview": "https://garage35.fi/",
+      "technologies": [
+        "React",
+        "Tailwind CSS",
+        "React Router",
+        "Axios",
+        "Node.js",
+        "Express"
+      ],
+      "tags": [
+        "React",
+        "Tailwind CSS",
+        "React Router",
+        "Axios",
+        "React Icons",
+        "Node.js",
+        "Express"
+      ],
+      "background": "The project originated from the need to create a user-friendly and functional car dealer website that allows users to easily browse and purchase cars online.",
+      "challenges": "The primary challenges included implementing effective car filtering and integrating a with a backend server to store car data.",
+      "outcomes": "To overcome these challenges, I utilized React, Tailwind CSS, Node.js, and Express. I created a proxy server to handle the API requests."
+    },
+    {
+      "id": 3,
+      "title": "Markdown Note Taking Application",
+      "description": "NoteDock is a dynamic markdown note-taking application that seamlessly combines the simplicity of markdown with the power of a feature-rich note management system.",
+      "github": "https://github.com/CihanErenler/markdown-note-taking-offline",
+      "preview": "https://notedockio.netlify.app",
+      "technologies": ["React", "Styled-components", "React Router"],
+      "tags": ["React", "Styled-components", "React Router"],
+      "background": "The idea behind this project was to create a versatile note-taking application that merges the simplicity of markdown with advanced note management capabilities.",
+      "challenges": "One of the challenges faced was finding the right balance between a user-friendly interface and feature-rich functionalities.",
+      "outcomes": "To address this, I employed React, Styled-components, and React Router. The completed project is available on GitHub and live on Netlify."
+    },
+    {
+      "id": 4,
+      "title": "Movie Search App",
+      "description": "The Movie Search App is designed to allow users to display trending movies and TV shows, view details of specific films, and search for movies using queries.",
+      "github": "https://github.com/CihanErenler/react-movie-app",
+      "preview": "https://cihan-react-movieapp.netlify.app/",
+      "technologies": ["React", "CSS", "React Router", "Material UI"],
+      "tags": ["React", "CSS", "React Router", "Material UI"],
+      "background": "This project emerged from the need to create a centralized platform for users to explore trending movies, view details, and easily search for specific films.",
+      "challenges": "A key challenge was integrating movie data effectively and implementing a robust search functionality.",
+      "outcomes": "To tackle these challenges, I utilized React, CSS, React Router, and Material UI. The completed project is available on GitHub and live on Netlify."
+    },
+    {
+      "id": 5,
+      "title": "Color Generator",
+      "description": "The Color Generator project involves the creation of a React tool that allows users to generate tints and shades from a selected color. Additionally, the tool enables users to copy any generated color.",
+      "github": "https://github.com/CihanErenler/react-color-generator",
+      "preview": "https://c-react-color-generator.netlify.app/",
+      "technologies": ["React", "CSS", "React Color", "React Icons"],
+      "tags": ["React", "CSS", "React Color", "React Icons"],
+      "background": "This project originated from the need to create a versatile color generation tool that provides users with the ability to generate and copy colors easily.",
+      "challenges": "A significant challenge was developing a tool that efficiently generates color variations and allows users to copy the generated colors seamlessly.",
+      "outcomes": "To address these challenges, I employed React, CSS, React Color, and React Icons. The completed project is available on GitHub and live on Netlify."
+    },
+    {
+      "id": 6,
+      "title": "Weather App",
+      "description": "The Weather App is designed to allow users to search for real-time weather conditions in different cities. Users can retrieve information such as temperature, humidity, and pressure.",
+      "github": "https://github.com/CihanErenler/weatherApp",
+      "preview": "https://cihanweatherapp.netlify.app/",
+      "technologies": ["JavaScript", "CSS"],
+      "tags": ["Javascript", "CSS"],
+      "background": "The motivation behind this project was to create a user-friendly application that provides real-time weather information for users searching in various cities.",
+      "challenges": "The primary challenge was integrating weather data effectively and designing a simple yet informative user interface.",
+      "outcomes": "To overcome these challenges, I employed JavaScript and CSS. The completed project is available on GitHub and live on Netlify."
+    }
+  ],
+  "portfolioWebsite": {
+    "name": "portfilio-website-v2",
+    "description": "Personal portfolio website built with React, TypeScript, and Tailwind CSS",
+    "techStack": {
+      "frontend": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "React Router",
+        "Framer Motion"
+      ],
+      "buildTools": ["Vite", "TypeScript", "ESLint"],
+      "styling": ["Tailwind CSS", "PostCSS", "Autoprefixer"],
+      "dependencies": [
+        "framer-motion",
+        "localforage",
+        "match-sorter",
+        "react",
+        "react-dom",
+        "react-icons",
+        "react-router-dom",
+        "sort-by"
+      ]
+    },
+    "features": [
+      "Responsive design",
+      "Dark mode support",
+      "Project showcase with filtering",
+      "Resume/CV display",
+      "Contact form",
+      "Single project detail pages",
+      "Smooth animations with Framer Motion"
+    ],
+    "navigation": [
+      {
+        "name": "home",
+        "path": "/"
+      },
+      {
+        "name": "projects",
+        "path": "/projects"
+      },
+      {
+        "name": "resume",
+        "path": "/resume"
+      },
+      {
+        "name": "contact",
+        "path": "/contact"
+      }
+    ]
+  },
+  "additionalProjects": [
+    {
+      "name": "E-Commerce Website with React",
+      "url": "https://hanci.netlify.app",
+      "github": "https://github.com/CihanErenler/react-e-commerce"
+    },
+    {
+      "name": "Movie Searching App with React",
+      "url": "https://cihan-react-movieapp.netlify.app",
+      "github": "https://github.com/CihanErenler/react-movie-app"
+    }
+  ],
+  "professionalFocus": {
+    "primary": "Front-end and back-end development for complex scalable web applications",
+    "specializations": [
+      "React.js development",
+      "TypeScript",
+      "Node.js and Express.js",
+      "Full-stack web applications",
+      "UI/UX design and implementation",
+      "Testing (Jest, React Testing Library, Cypress)"
+    ]
+  },
+  "deploymentPlatforms": ["Netlify", "Hetzner (for server deployments)"],
+  "versionControl": "Git/GitHub",
+  "additionalContext": {
+    "location": "Finland",
+    "currentStatus": "Currently working as Front-End Engineer at SSH Secure Collaboration",
+    "educationStatus": "Currently studying Computer Applications at Hame University of Applied Sciences",
+    "previousEducation": "Bachelor of Art Teaching from Cukurova University, Turkey"
+  }
+}

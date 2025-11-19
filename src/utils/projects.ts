@@ -8,6 +8,30 @@ import garage35 from "../assets/images/garage35.png";
 const projects = [
   {
     id: 0,
+    title: "AI Portfolio Chatbot",
+    desc: "An AI-powered chat widget embedded into my portfolio that lets visitors ask questions about me, my skills, and my projects in a conversational way.",
+    image: hero, // update the import/variable name as needed
+    github: "https://github.com/CihanErenler/portfolio-ai-chatbot-app", // update if different
+    preview: "https://your-domain-or-subdomain-here.com", // replace with the live URL
+    tags: ["Node.js", "Express", "PostgreSQL", "pgvector", "OpenAI", "Vite"],
+    filter: ["Node.js", "Express", "PostgreSQL"],
+    technologies: [
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "pgvector",
+      "OpenAI",
+      "Vite",
+    ],
+    background:
+      "I wanted a more interactive way for visitors to explore my portfolio and, at the same time, showcase that I can build and deploy real-world AI applications. The idea was to create an AI assistant that knows my background, skills, and projects and can be embedded as a chat widget on any website.",
+    challenges:
+      "The main challenges were setting up a production-like environment on a Hetzner server, configuring PostgreSQL with the pgvector extension for vector search, and wiring up a secure SSH-based workflow from my local machine. On top of that, I needed a clean way to expose the chatbot as an embeddable iframe without overcomplicating the architecture.",
+    actionsOutcomes:
+      "I built a Node.js + Express backend that stores my portfolio data as vector embeddings in PostgreSQL using pgvector and performs RAG-style retrieval for each user question. The chat UI is a small Vite-powered frontend that runs inside an iframe, and I expose a simple embed script so it can be dropped into any page with a single <script> tag. The result is a fast, always-on AI assistant that demonstrates both my full-stack skills and my experience with AI tooling.",
+  },
+  {
+    id: 1,
     title: "Portfolio Website",
     desc: "This project involves the creation of my personal website, which you are currently exploring. The primary goal is to provide visitors with information about me and showcase various projects I have worked on.",
     image: portfolioApp,
@@ -24,7 +48,7 @@ const projects = [
       "To address this, I utilized TypeScript, React, and Tailwind CSS to implement a responsive and visually appealing design. The completed project is available on GitHub  and live on Netlify.",
   },
   {
-    id: 1,
+    id: 2,
     title: "Car Dealer Website",
     desc: "The Car Dealer Website project involves the development of an online platform where users can browse available cars and view details of each car. Users can also filter available cars based on various criteria such as brand, model, and price. Users can also preview individual cars and add them to the shopping cart.",
     image: garage35,
@@ -56,7 +80,7 @@ const projects = [
       "To overcome these challenges, I utilized React, Tailwind CSS, Node.js, and Express. I created a proxy server to handle the API requests.",
   },
   {
-    id: 2,
+    id: 3,
     title: "Markdown Note Taking Application",
     desc: "NoteDock is a dynamic markdown note-taking application that seamlessly combines the simplicity of markdown with the power of a feature-rich note management system.",
     image: hero,
@@ -73,7 +97,7 @@ const projects = [
       "To address this, I employed React, Styled-components, and React Router. The completed project is available on GitHub  and live on Netlify.",
   },
   {
-    id: 3,
+    id: 4,
     title: "Movie Search App",
     desc: "The Movie Search App is designed to allow users to display trending movies and TV shows, view details of specific films, and search for movies using queries.",
     image: project4,
@@ -90,7 +114,7 @@ const projects = [
       "To tackle these challenges, I utilized React, CSS, React Router, and Material UI. The completed project is available on GitHub and live on Netlify.",
   },
   {
-    id: 4,
+    id: 5,
     title: "Color Generator",
     desc: "The Color Generator project involves the creation of a React tool that allows users to generate tints and shades from a selected color. Additionally, the tool enables users to copy any generated color.",
     image: project2,
@@ -107,7 +131,7 @@ const projects = [
       "To address these challenges, I employed React, CSS, React Color, and React Icons. The completed project is available on GitHub and live on Netlify.",
   },
   {
-    id: 5,
+    id: 6,
     title: "Weather App",
     desc: "The Weather App is designed to allow users to search for real-time weather conditions in different cities. Users can retrieve information such as temperature, humidity, and pressure.",
     image: project3,

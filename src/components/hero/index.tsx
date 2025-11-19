@@ -4,9 +4,11 @@ import { Button, Link } from "..";
 
 const Hero: FC<JSX.IntrinsicElements["section"]> = () => {
   return (
-    <section className=" dark:bg-dark-1">
-      <div className=" bg-gradient-to-tl from-green-100 via-blue-200 to-purple-200 dark:bg-gradient-to-tl dark:from-green-950 dark:ia-blue-950 dark:to-purple-950  p-10 flex flex-col items-center justify-center dark:bg-opacity-10">
-        <div className="lg:w-3/4 w-full bg-white dark:bg-dark-1 h-full rounded-3xl border border-gray-200 dark:border-dark-3 flex items-center flex-col justify-between p-5 dark:text-white ">
+    <section className="relative  overflow-hidden bg-gradient-to-b from-blue-100 via-white to-purple-100 dark:bg-gradient-to-b dark:from-[#0f172a] dark:via-[#0b1220] dark:to-[#1e1b4b]">
+      <div className="pointer-events-none absolute -top-24 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-purple-300/40 blur-3xl dark:bg-purple-700/30"></div>
+      <div className="pointer-events-none absolute -bottom-10 right-10 h-64 w-64 rounded-full bg-blue-300/40 blur-3xl dark:bg-indigo-700/30"></div>
+      <div className="relative z-10 p-10 flex flex-col items-center justify-center">
+        <div className="lg:w-3/4 w-full bg-white dark:bg-dark-1 h-full rounded-3xl border border-gray-200 dark:border-dark-3 flex items-center flex-col justify-between p-5 dark:text-white shadow-sm ">
           <div className="md:h-[200px] md:w-[200px] h-[150px] w-[150px] border border-slate-300 dark:border-dark-3 overflow-hidden bg-blue-100 dark:bg-slate-900 rounded-full ">
             <img
               className="profile-photo w-full h-full object-cover scale-[1.7] md:translate-y-20	translate-y-10"
