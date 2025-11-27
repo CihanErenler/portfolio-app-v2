@@ -1,13 +1,7 @@
 import { FC } from "react";
 import { Link, SocialMedia, Button } from "../../components";
 import photo from "../../assets/images/cihan-image.png";
-import {
-  FaCode,
-  FaEnvelope,
-  FaLinkedin,
-  FaGithub,
-  FaPhone,
-} from "react-icons/fa6";
+import { FaCode, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
 const Contact: FC<JSX.IntrinsicElements["main"]> = () => {
