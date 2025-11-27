@@ -10,6 +10,7 @@ const Button: FC<ButtonType & JSX.IntrinsicElements["button"]> = ({
   download,
   type,
   full,
+  disabled,
 }) => {
   if (href) {
     return (
@@ -42,9 +43,12 @@ const Button: FC<ButtonType & JSX.IntrinsicElements["button"]> = ({
 
   return (
     <button
-      className={`btn ${full ? "full" : ""}`}
+      className={`btn ${full ? "full" : ""} ${
+        disabled ? "opacity-70 cursor-not-allowed" : ""
+      }`}
       onClick={action}
       type={type ? type : "button"}
+      disabled={disabled}
     >
       {children}
     </button>

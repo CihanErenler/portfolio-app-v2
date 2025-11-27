@@ -2,7 +2,7 @@ import { FC } from "react";
 import { ProjectCardType } from "../../@types/componentTypes";
 import { Tag } from "..";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { FaArrowRight } from "react-icons/fa6";
 
 const ProjectCard: FC<ProjectCardType> = ({ id, title, desc, image, tags }) => {
   const navigate = useNavigate();
@@ -13,43 +13,52 @@ const ProjectCard: FC<ProjectCardType> = ({ id, title, desc, image, tags }) => {
   };
 
   return (
-    <motion.section
-      key="project"
-      layout
-      initial={{ scale: 0.8, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      exit={{ scale: 0.8, opacity: 0 }}
-      transition={{ duration: 0.2 }}
-      className="flex-1 rounded-xl overflow-hidden border border-slate-300 hover:shadow-xl dark:border-dark-3 dark:bg-dark-2 transition-shadow duration-300 mb-5 lg:mb-0"
+    <article
+      onClick={handleNavigation}
+      className="h-full flex flex-col rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer group"
     >
-      <div
-        className="h-[250px] relative overflow-hidden group cursor-pointer"
-        onClick={handleNavigation}
-      >
-        {/* <div className="bg-slate-600 absolute w-full h-full top-0 left-0 opacity-30 hover:opacity-0 transition-all duration-300"></div> */}
-        <div className="absolute w-full h-full -bottom-[250px] l-0 p-5 text-white bg-blue-500/90 dark:bg-blue-950/90  peer-hover:bottom-0 group-hover:bottom-0 transition-all duration-300">
-          <h3 className="font-bold text-lg mb-2">Description</h3>
-          <p className="font-light">{desc}</p>
+      {/* Image Container */}
+      <div className="relative overflow-hidden aspect-video bg-slate-100 dark:bg-slate-900">
+        {/* Overlay gradient on hover */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+
+        {/* View Project Button */}
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 z-20">
+          <div className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white px-4 py-2 rounded-full flex items-center gap-2 text-sm font-semibold shadow-lg">
+            View Project
+            <FaArrowRight className="text-xs group-hover:translate-x-1 transition-transform duration-300" />
+          </div>
         </div>
+
+        {/* Project Image */}
         <img
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
           src={image}
-          alt="project-image"
+          alt={`${title} project screenshot`}
+          loading="lazy"
         />
       </div>
-      <div className="p-5">
-        <div>
-          <h2 className="font-bold text-lg text-center capitalize pb-3 dark:text-white">
-            {title}
-          </h2>
-        </div>
-        <div className="flex items-center justify-center gap-2 flex-wrap">
+
+      {/* Content */}
+      <div className="flex-1 flex flex-col p-5">
+        {/* Title */}
+        <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2 capitalize group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+          {title}
+        </h3>
+
+        {/* Description */}
+        <p className="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-2 flex-1">
+          {desc}
+        </p>
+
+        {/* Tags */}
+        <div className="flex items-center gap-2 flex-wrap pt-3 border-t border-slate-100 dark:border-slate-700">
           {tags.map((tag, i) => (
             <Tag key={i}>{tag}</Tag>
           ))}
         </div>
       </div>
-    </motion.section>
+    </article>
   );
 };
 

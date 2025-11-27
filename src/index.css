@@ -14,10 +14,15 @@ body *,
 html,
 body {
   @apply font-nunito;
+  scroll-behavior: smooth;
 }
 
-.nav-link {
-  @apply h-10 w-auto px-3 active:scale-95 transition-transform flex items-center justify-center rounded-full capitalize hover:bg-accent-1 dark:hover:bg-[#171b20] text-slate-700 aria-[current=page]:bg-blue-100 dark:aria-[current=page]:bg-slate-800 dark:aria-[current=page]:text-blue-500 aria-[current=page]:text-blue-600 font-semibold dark:text-white;
+.nav-link.active span {
+  width: 75%;
+}
+
+.nav-link.active {
+  @apply text-blue-600 dark:text-blue-400;
 }
 
 .icon-button {
@@ -25,7 +30,7 @@ body {
 }
 
 .btn {
-  @apply min-w-[150px] max-w-[300px] bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-500 hover:to-blue-600 rounded-full md:h-12 h-10 md:text-lg font-semibold flex items-center justify-center px-5 transition-all cursor-pointer active:scale-95 shadow-md hover:shadow-lg hover:-translate-y-0.5;
+  @apply min-w-[150px] max-w-[300px] bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-500 hover:to-blue-600 dark:from-blue-600 dark:to-blue-700 dark:hover:from-blue-500 dark:hover:to-blue-600 rounded-full md:h-12 h-10 md:text-lg font-semibold flex items-center justify-center px-5 transition-all duration-300 cursor-pointer active:scale-95 shadow-md hover:shadow-lg hover:-translate-y-0.5;
 }
 
 .full {
@@ -41,7 +46,7 @@ body {
 }
 
 .form-input {
-  @apply block bg-slate-100 w-full p-3 px-5 rounded-lg transition-all border hover:border-blue-300 focus:border-blue-600 dark:focus:border-blue-600 dark:hover:border-blue-300 outline-none focus:shadow-[0px_0px_0px_4px_#bee3f8] mb-5 dark:bg-dark-3 dark:border-slate-700 dark:focus:shadow-[0px_0px_0px_4px_#63B3ED];
+  @apply block bg-slate-100 w-full p-3 px-5 rounded-lg transition-all duration-200 border border-slate-200 hover:border-blue-300 focus:border-blue-600 dark:focus:border-blue-600 dark:hover:border-blue-300 outline-none focus:shadow-[0px_0px_0px_4px_#bee3f8] mb-5 dark:bg-dark-3 dark:border-slate-700 dark:focus:shadow-[0px_0px_0px_4px_#63B3ED] dark:text-slate-200;
 }
 
 .card {

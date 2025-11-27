@@ -19,6 +19,7 @@ import ResumeTitle from "./resume-title";
 import SocialMedia from "./social-media";
 import ContactForm from "./contact-form";
 import SmallNav from "./small-nav";
+import ScrollToTopButton from "./scroll-to-top-button";
 
 export {
   Navbar,
@@ -42,4 +43,7 @@ export {
   SocialMedia,
   ContactForm,
   SmallNav,
+  ScrollToTopButton,
 };
+
+export { ProjectCardSkeleton, SingleProjectSkeleton } from "./skeleton";

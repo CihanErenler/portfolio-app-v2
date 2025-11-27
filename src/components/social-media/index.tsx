@@ -11,6 +11,9 @@ const SocialMedia: FC<JSX.IntrinsicElements["section"]> = () => {
         className="icon-button"
         href="https://www.linkedin.com/in/cihanerenler/"
         target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visit my LinkedIn profile"
+        title="LinkedIn"
       >
         <FaLinkedin
           size={20}
@@ -21,6 +24,9 @@ const SocialMedia: FC<JSX.IntrinsicElements["section"]> = () => {
         className="icon-button"
         href="https://github.com/CihanErenler"
         target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visit my GitHub profile"
+        title="GitHub"
       >
         <FaGithub
           size={20}
