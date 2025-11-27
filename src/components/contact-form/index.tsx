@@ -48,7 +48,10 @@ const ContactForm: FC<JSX.IntrinsicElements["form"]> = () => {
   };
 
   return (
-    <form className="card" onSubmit={(e) => handleSubmit(e)}>
+    <form
+      className="card hover:shadow-xl transition-shadow duration-300"
+      onSubmit={(e) => handleSubmit(e)}
+    >
       <input
         className="form-input"
         type="text"
@@ -56,6 +59,7 @@ const ContactForm: FC<JSX.IntrinsicElements["form"]> = () => {
         name="email"
         value={email}
         placeholder="Email"
+        required
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
@@ -65,6 +69,7 @@ const ContactForm: FC<JSX.IntrinsicElements["form"]> = () => {
         name="name"
         value={name}
         placeholder="Name"
+        required
         onChange={(e) => setName(e.target.value)}
       />
       <textarea
@@ -73,6 +78,7 @@ const ContactForm: FC<JSX.IntrinsicElements["form"]> = () => {
         name="message"
         value={message}
         placeholder="Message"
+        required
         onChange={(e) => setMessage(e.target.value)}
       />
       <Button type="submit" full={true}>

@@ -24,14 +24,14 @@ const SmallNav: FC<JSX.IntrinsicElements["nav"]> = () => {
   return (
     <nav
       ref={navRef}
-      className="h-0 overflow-hidden lg:hidden block bg-white dark:bg-dark-1 text-slate-600 dark:text-slate-300 transition-all"
+      className="h-0 overflow-hidden lg:hidden block bg-white/80 backdrop-blur-lg dark:bg-dark-1/80 text-slate-600 dark:text-slate-300 transition-all border-b border-slate-200 dark:border-dark-3"
     >
       <div ref={innerRef} className="flex flex-col capitalize">
         {navItems.map((item, index) => (
           <NavLink
             key={index}
             to={item.path}
-            className="p-2 px-3"
+            className="p-3 px-5 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border-t border-slate-100 dark:border-slate-800"
             onClick={() => setShowNav(false)}
           >
             {item.name}

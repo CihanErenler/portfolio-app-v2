@@ -21,7 +21,7 @@ const Navbar: FC<JSX.IntrinsicElements["nav"]> = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between lg:px-8 px-3 h-14 bg-white max-w-screen dark:bg-dark-1 sticky top-0 z-50 border-b border-b-slate-200 dark:border-b-dark-3">
+    <nav className="flex items-center justify-between lg:px-8 px-3 h-14 bg-white/80 backdrop-blur-lg max-w-screen dark:bg-dark-1/80 sticky top-0 z-50 border-b border-b-slate-200 dark:border-b-dark-3 shadow-sm">
       <SocialMedia />
       <section className="gap-2 lg:flex hidden">
         {navItems.map((navItem) => (

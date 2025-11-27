@@ -36,10 +36,30 @@ const SingleProject: FC<JSX.IntrinsicElements["main"]> = () => {
   }
 
   return (
-    <main className="bg-white dark:bg-dark-1 px-8 page">
-      <section className="max-w-[900px] m-auto">
+    <main
+      className="relative bg-gray-50 dark:bg-slate-900 px-8 page"
+      style={{
+        backgroundImage: `radial-gradient(circle, rgba(148, 163, 184, 0.3) 1px, transparent 1px)`,
+        backgroundSize: "24px 24px",
+      }}
+    >
+      <div
+        className="absolute inset-0 dark:hidden"
+        style={{
+          backgroundImage: `radial-gradient(circle, rgba(148, 163, 184, 0.3) 1px, transparent 1px)`,
+          backgroundSize: "24px 24px",
+        }}
+      ></div>
+      <div
+        className="absolute inset-0 hidden dark:block"
+        style={{
+          backgroundImage: `radial-gradient(circle, rgba(71, 85, 105, 0.3) 1px, transparent 1px)`,
+          backgroundSize: "24px 24px",
+        }}
+      ></div>
+      <section className="relative z-10 max-w-[900px] m-auto">
         <Title>{project.title}</Title>
-        <div className="w-full m-auto md:h-[400px] h-[300px] mb-10 rounded-xl overflow-hidden">
+        <div className="w-full m-auto md:h-[400px] h-[300px] mb-10 rounded-2xl overflow-hidden border border-slate-200 dark:border-dark-3 shadow-lg">
           <img
             className="w-full h-full object-cover"
             src={project.image}
@@ -61,7 +81,7 @@ const SingleProject: FC<JSX.IntrinsicElements["main"]> = () => {
         </div>
         <SecondaryTitle>Project Background</SecondaryTitle>
         <Paragraph>{project.background}</Paragraph>
-        <div className="bg-blue-100 rounded-lg p-5 dark:bg-dark-2">
+        <div className="bg-white dark:bg-dark-2 border border-slate-200 dark:border-dark-3 rounded-2xl p-5 shadow-sm">
           <Paragraph>Technologies used:</Paragraph>
           {project.technologies?.map((item) => {
             return (
@@ -70,7 +90,7 @@ const SingleProject: FC<JSX.IntrinsicElements["main"]> = () => {
                 className="text-slate-600 text-md md:text-lg mb-2 font-normal flex gap-2 items-center justify-start"
               >
                 <span className="inline">
-                  <FaCheck className="fill-blue-600" />
+                  <FaCheck className="fill-blue-600 dark:fill-blue-500" />
                 </span>
                 <span className="dark:text-slate-300">{item}</span>
               </div>

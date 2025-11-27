@@ -19,11 +19,29 @@ const NotFound: FC<JSX.IntrinsicElements["main"]> = () => {
       : (error as { message?: string })?.message;
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-blue-100 via-white to-purple-100 px-6 py-16 dark:bg-gradient-to-b dark:from-[#0f172a] dark:via-[#0b1220] dark:to-[#1e1b4b]">
+    <main
+      className="relative min-h-screen overflow-hidden bg-gray-50 dark:bg-slate-900 px-6 py-16"
+      style={{
+        backgroundImage: `radial-gradient(circle, rgba(148, 163, 184, 0.4) 1px, transparent 1px)`,
+        backgroundSize: "24px 24px",
+      }}
+    >
       <ScrollTopOnMount />
-      <div className="pointer-events-none absolute -top-24 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-purple-300/40 blur-3xl dark:bg-purple-700/30"></div>
-      <div className="pointer-events-none absolute -bottom-10 right-10 h-64 w-64 rounded-full bg-blue-300/40 blur-3xl dark:bg-indigo-700/30"></div>
-      <section className="relative z-10 mx-auto flex w-full max-w-2xl flex-col items-center gap-6 rounded-3xl border border-white/60 bg-white/80 p-12 text-center shadow-2xl backdrop-blur-xl dark:border-slate-800/80 dark:bg-dark-2/90">
+      <div
+        className="absolute inset-0 dark:hidden"
+        style={{
+          backgroundImage: `radial-gradient(circle, rgba(148, 163, 184, 0.4) 1px, transparent 1px)`,
+          backgroundSize: "24px 24px",
+        }}
+      ></div>
+      <div
+        className="absolute inset-0 hidden dark:block"
+        style={{
+          backgroundImage: `radial-gradient(circle, rgba(71, 85, 105, 0.4) 1px, transparent 1px)`,
+          backgroundSize: "24px 24px",
+        }}
+      ></div>
+      <section className="relative z-10 mx-auto flex w-full max-w-2xl flex-col items-center gap-6 rounded-3xl border border-slate-200 bg-white p-12 text-center shadow-xl dark:border-dark-3 dark:bg-dark-2">
         <span className="rounded-full border border-slate-200/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-blue-600 dark:border-slate-600/80 dark:text-blue-300">
           {status === 404 ? "Not Found" : "Something Went Wrong"}
         </span>
