@@ -42,7 +42,7 @@ const cv = {
     {
       degree: "Computer Applications",
       university: "Hame University of Applied Sciences - Finland",
-      date: "2020 - Current",
+      date: "2020 - 2024",
     },
     {
       degree: "Bachelor of Art Teaching",
