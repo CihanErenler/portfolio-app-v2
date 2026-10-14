@@ -7,10 +7,10 @@ import { SiTypescript, SiTailwindcss } from "react-icons/si";
 
 type Token = [className: string, text: string];
 
-const kw = "text-emerald-400";
-const str = "text-amber-300";
-const id = "text-blue-300";
-const fn = "text-yellow-300";
+const kw = "text-emerald-700 dark:text-emerald-400";
+const str = "text-amber-700 dark:text-amber-300";
+const id = "text-teal-700 dark:text-blue-300";
+const fn = "text-yellow-700 dark:text-yellow-300";
 
 const codeLines: Token[][] = [
   [
@@ -166,28 +166,28 @@ const Hero: FC<JSX.IntrinsicElements["section"]> = () => {
           <div className="hidden lg:block">
             <div className="relative group">
               {/* Code card */}
-              <div className="relative bg-dark-1 rounded-lg overflow-hidden shadow-2xl border border-zinc-800 font-mono text-sm">
+              <div className="relative bg-white dark:bg-dark-1 rounded-lg overflow-hidden shadow-xl dark:shadow-2xl border border-zinc-200 dark:border-zinc-800 font-mono text-sm">
                 {/* Tab bar */}
-                <div className="flex items-end bg-zinc-900 border-b border-zinc-800">
+                <div className="flex items-end bg-zinc-100 dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800">
                   <div className="flex items-center gap-1.5 px-4 py-3">
-                    <div className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700" />
                   </div>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-dark-1 border-t-2 border-emerald-500 -mb-px text-zinc-200">
-                    <SiTypescript className="text-emerald-400" size={12} />
+                  <div className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-dark-1 border-t-2 border-emerald-500 -mb-px text-zinc-800 dark:text-zinc-200">
+                    <SiTypescript className="text-emerald-600 dark:text-emerald-400" size={12} />
                     <span>portfolio.tsx</span>
-                    <span className="ml-2 text-zinc-600">×</span>
+                    <span className="ml-2 text-zinc-400 dark:text-zinc-600">×</span>
                   </div>
-                  <div className="flex items-center gap-2 px-4 py-2 text-zinc-600">
+                  <div className="flex items-center gap-2 px-4 py-2 text-zinc-400 dark:text-zinc-600">
                     <SiTypescript size={12} />
                     <span>projects.ts</span>
                   </div>
                 </div>
 
                 {/* Breadcrumb */}
-                <div className="px-4 py-1.5 text-xs text-zinc-500 border-b border-zinc-800/60">
-                  src <span className="text-zinc-700">›</span> portfolio.tsx
+                <div className="px-4 py-1.5 text-xs text-zinc-500 border-b border-zinc-200 dark:border-zinc-800/60">
+                  src <span className="text-zinc-400 dark:text-zinc-700">›</span> portfolio.tsx
                 </div>
 
                 {/* Code content */}
@@ -197,23 +197,25 @@ const Hero: FC<JSX.IntrinsicElements["section"]> = () => {
                     return (
                       <div
                         key={i}
-                        className={`flex ${active ? "bg-white/[0.04]" : ""}`}
+                        className={`flex ${active ? "bg-zinc-100 dark:bg-white/[0.04]" : ""}`}
                       >
                         <span
                           className={`w-12 pr-4 text-right select-none ${
-                            active ? "text-zinc-400" : "text-zinc-600"
+                            active
+                              ? "text-zinc-600 dark:text-zinc-400"
+                              : "text-zinc-400 dark:text-zinc-600"
                           }`}
                         >
                           {i + 1}
                         </span>
-                        <span className="whitespace-pre text-slate-300">
+                        <span className="whitespace-pre text-zinc-700 dark:text-slate-300">
                           {tokens.map(([cls, text], j) => (
                             <span key={j} className={cls}>
                               {text}
                             </span>
                           ))}
                           {active && (
-                            <span className="inline-block w-2 h-4 -mb-0.5 bg-emerald-400 animate-pulse" />
+                            <span className="inline-block w-2 h-4 -mb-0.5 bg-emerald-600 dark:bg-emerald-400 animate-pulse" />
                           )}
                         </span>
                       </div>
@@ -222,7 +224,7 @@ const Hero: FC<JSX.IntrinsicElements["section"]> = () => {
                 </div>
 
                 {/* Status bar */}
-                <div className="flex items-center justify-between px-4 py-1 text-xs bg-emerald-700 text-emerald-50">
+                <div className="flex items-center justify-between px-4 py-1 text-xs bg-emerald-600 dark:bg-emerald-700 text-white dark:text-emerald-50">
                   <span>main</span>
                   <span className="flex gap-4">
                     <span>Ln {codeLines.length}, Col 1</span>

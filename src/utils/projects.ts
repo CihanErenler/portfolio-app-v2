@@ -7,7 +7,7 @@ const projects = [
   {
     id: 0,
     title: "AI Portfolio Chatbot",
-    desc: "An AI-powered chat widget embedded into my portfolio that lets visitors ask questions about me, my skills, and my projects in a conversational way. You can see it in the bottom right corner of the page.",
+    desc: "An AI-powered chat widget embedded into my portfolio that lets visitors ask questions about me, my skills, and my projects. Answers are generated from my own portfolio content using retrieval-augmented generation and streamed back as they are written. It follows the site's light and dark theme. You can see it in the bottom right corner of the page.",
     image: chatbot,
     github: "https://github.com/CihanErenler/portfolio-ai-chatbot-app",
     tags: ["Node.js", "Express", "PostgreSQL", "pgvector", "OpenAI", "Vite"],
@@ -23,9 +23,9 @@ const projects = [
     background:
       "I wanted a more interactive way for visitors to explore my portfolio and, at the same time, showcase that I can build and deploy real-world AI applications. The idea was to create an AI assistant that knows my background, skills, and projects and can be embedded as a chat widget on any website.",
     challenges:
-      "The main challenges were setting up a production-like environment on a Hetzner server, configuring PostgreSQL with the pgvector extension for vector search, and wiring up a secure SSH-based workflow from my local machine. On top of that, I needed a clean way to expose the chatbot as an embeddable iframe without overcomplicating the architecture.",
+      "The main challenges were setting up a production-like environment on a Hetzner server, configuring PostgreSQL with the pgvector extension for vector search, and wiring up a secure SSH-based workflow from my local machine. I also needed a clean way to expose the chatbot as an embeddable iframe without overcomplicating the architecture. Once it was live, a public AI endpoint meant dealing with bot traffic and slow first responses, so I had to protect it from abuse and runaway costs and make answers feel fast.",
     actionsOutcomes:
-      "I built a Node.js + Express backend that stores my portfolio data as vector embeddings in PostgreSQL using pgvector and performs RAG-style retrieval for each user question. The chat UI is a small Vite-powered frontend that runs inside an iframe, and I expose a simple embed script so it can be dropped into any page with a single <script> tag. The result is a fast, always-on AI assistant that demonstrates both my full-stack skills and my experience with AI tooling.",
+      "I built a Node.js + Express backend that stores my portfolio content as vector embeddings in PostgreSQL using pgvector. For each question it embeds the query, retrieves the most relevant passages, and streams an answer from OpenAI that is grounded in that context. The chat UI is a small Vite-powered frontend that runs inside an iframe; a single <script> tag embeds it on any page, and it syncs its open state and the light/dark theme with the host page through postMessage. Rate limiting, input limits, a daily request cap and a spending limit on the API key keep it safe to leave running. The result is a fast, always-on AI assistant that demonstrates both my full-stack skills and my experience with AI tooling.",
   },
   {
     id: 2,
