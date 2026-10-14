@@ -5,51 +5,91 @@ import { Button } from "..";
 import { FaReact, FaNode } from "react-icons/fa6";
 import { SiTypescript, SiTailwindcss } from "react-icons/si";
 
+type Token = [className: string, text: string];
+
+const kw = "text-emerald-400";
+const str = "text-amber-300";
+const id = "text-blue-300";
+const fn = "text-yellow-300";
+
+const codeLines: Token[][] = [
+  [
+    [kw, "import"],
+    ["", " { "],
+    [id, "Developer"],
+    ["", " } "],
+    [kw, "from"],
+    [str, " './portfolio'"],
+  ],
+  [],
+  [
+    [kw, "const"],
+    [id, " skills"],
+    ["", " = ["],
+  ],
+  [
+    ["", "  "],
+    [str, "'React'"],
+    ["", ", "],
+    [str, "'TypeScript'"],
+    ["", ","],
+  ],
+  [
+    ["", "  "],
+    [str, "'Node.js'"],
+    ["", ", "],
+    [str, "'Express'"],
+    ["", ","],
+  ],
+  [
+    ["", "  "],
+    [str, "'MongoDB'"],
+    ["", ", "],
+    [str, "'PostgreSQL'"],
+  ],
+  [["", "]"]],
+  [],
+  [
+    [kw, "export function"],
+    [fn, " buildAmazingThings"],
+    ["", "() {"],
+  ],
+  [
+    ["", "  "],
+    [kw, "return"],
+    [str, " 'Clean code + Great UX'"],
+  ],
+  [["", "}"]],
+  [],
+];
+
 const Hero: FC<JSX.IntrinsicElements["section"]> = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50 dark:from-slate-900 dark:via-blue-950/20 dark:to-slate-900 py-12 md:py-16">
-      {/* Animated gradient orbs */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 dark:bg-blue-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/10 dark:bg-purple-500/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
-
-      {/* Subtle grid pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.015] dark:opacity-[0.03]"
-        style={{
-          backgroundImage: `linear-gradient(rgba(59, 130, 246, 0.5) 1px, transparent 1px),
-                           linear-gradient(90deg, rgba(59, 130, 246, 0.5) 1px, transparent 1px)`,
-          backgroundSize: "50px 50px",
-        }}
-      />
+    <section className="relative overflow-hidden bg-zinc-50 dark:bg-dark-1 py-12 md:py-20">
+      <div className="absolute inset-0 bg-grid [mask-image:linear-gradient(to_bottom,black,transparent)]" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Profile and Info */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-4">
             {/* Profile Image */}
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-40 transition duration-500" />
-              <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-xl bg-gradient-to-br from-blue-100 to-purple-100 dark:from-slate-800 dark:to-slate-900">
-                <img
-                  className="w-full h-full object-cover scale-[1.6] translate-y-7"
-                  src={photo}
-                  alt="Cihan Erenler - Full-stack developer"
-                />
-              </div>
+            <div className="w-28 h-28 md:w-32 md:h-32 rounded-lg overflow-hidden border border-zinc-300 dark:border-dark-3 bg-zinc-200 dark:bg-dark-2">
+              <img
+                className="w-full h-full object-cover scale-[1.6] translate-y-7"
+                src={photo}
+                alt="Cihan Erenler - Full-stack developer"
+              />
             </div>
 
             {/* Text Content */}
             <div className="space-y-3">
               <div>
-                <p className="text-sm font-mono text-blue-600 dark:text-blue-400 mb-1.5">
-                  &lt;developer&gt;
+                <p className="text-sm font-mono text-emerald-600 dark:text-emerald-400 mb-2">
+                  $ whoami
                 </p>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-mono font-bold tracking-tight text-zinc-900 dark:text-white">
                   Cihan Erenler
                 </h1>
-                <p className="text-sm font-mono text-blue-600 dark:text-blue-400 mt-1.5">
-                  &lt;/developer&gt;
-                </p>
               </div>
 
               <div className="space-y-1">
@@ -75,7 +115,7 @@ const Hero: FC<JSX.IntrinsicElements["section"]> = () => {
                 </div>
               </div>
 
-              <p className="text-sm md:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl">
+              <p className="text-sm md:text-base text-zinc-600 dark:text-slate-300 leading-relaxed max-w-xl">
                 I craft modern web applications with clean code and thoughtful
                 design. Specialized in building scalable solutions using the
                 latest technologies.
@@ -83,27 +123,27 @@ const Hero: FC<JSX.IntrinsicElements["section"]> = () => {
 
               {/* Tech stack indicators */}
               <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                <div className="flex items-center gap-2 px-3 py-1.5 bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 backdrop-blur-sm">
+                <div className="flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-dark-2 rounded-md border border-zinc-200 dark:border-dark-3 backdrop-blur-sm">
                   <FaReact className="text-cyan-500 text-lg" />
-                  <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                  <span className="text-xs font-mono text-slate-700 dark:text-slate-300">
                     React
                   </span>
                 </div>
-                <div className="flex items-center gap-2 px-3 py-1.5 bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 backdrop-blur-sm">
+                <div className="flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-dark-2 rounded-md border border-zinc-200 dark:border-dark-3 backdrop-blur-sm">
                   <SiTypescript className="text-blue-600 text-lg" />
-                  <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                  <span className="text-xs font-mono text-slate-700 dark:text-slate-300">
                     TypeScript
                   </span>
                 </div>
-                <div className="flex items-center gap-2 px-3 py-1.5 bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 backdrop-blur-sm">
+                <div className="flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-dark-2 rounded-md border border-zinc-200 dark:border-dark-3 backdrop-blur-sm">
                   <FaNode className="text-green-600 text-lg" />
-                  <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                  <span className="text-xs font-mono text-slate-700 dark:text-slate-300">
                     Node.js
                   </span>
                 </div>
-                <div className="flex items-center gap-2 px-3 py-1.5 bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 backdrop-blur-sm">
+                <div className="flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-dark-2 rounded-md border border-zinc-200 dark:border-dark-3 backdrop-blur-sm">
                   <SiTailwindcss className="text-cyan-400 text-lg" />
-                  <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                  <span className="text-xs font-mono text-slate-700 dark:text-slate-300">
                     Tailwind
                   </span>
                 </div>
@@ -115,7 +155,7 @@ const Hero: FC<JSX.IntrinsicElements["section"]> = () => {
               <Button to="/projects">View My Work</Button>
               <RouterLink
                 to="/contact"
-                className="px-6 py-3 border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 rounded-full font-semibold hover:border-blue-500 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-950/30 transition-all duration-300 hover:shadow-lg active:scale-95 text-center flex items-center justify-center"
+                className="px-5 h-10 md:h-11 border border-zinc-300 dark:border-dark-3 text-zinc-700 dark:text-zinc-300 rounded-md font-mono text-sm md:text-base font-semibold hover:border-emerald-500 dark:hover:border-emerald-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors duration-150 active:scale-[0.98] flex items-center justify-center"
               >
                 Get in Touch
               </RouterLink>
@@ -125,125 +165,71 @@ const Hero: FC<JSX.IntrinsicElements["section"]> = () => {
           {/* Right side - Code Preview Card */}
           <div className="hidden lg:block">
             <div className="relative group">
-              {/* Glow effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition duration-500" />
-
               {/* Code card */}
-              <div className="relative bg-slate-900 dark:bg-slate-950 rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
-                {/* Terminal header */}
-                <div className="flex items-center gap-2 px-4 py-3 bg-slate-800 dark:bg-slate-900 border-b border-slate-700">
-                  <div className="flex gap-1.5">
-                    <div className="w-3 h-3 rounded-full bg-red-500" />
-                    <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                    <div className="w-3 h-3 rounded-full bg-green-500" />
+              <div className="relative bg-dark-1 rounded-lg overflow-hidden shadow-2xl border border-zinc-800 font-mono text-sm">
+                {/* Tab bar */}
+                <div className="flex items-end bg-zinc-900 border-b border-zinc-800">
+                  <div className="flex items-center gap-1.5 px-4 py-3">
+                    <div className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
                   </div>
-                  <span className="text-sm text-slate-400 ml-2 font-mono">
-                    portfolio.tsx
-                  </span>
+                  <div className="flex items-center gap-2 px-4 py-2 bg-dark-1 border-t-2 border-emerald-500 -mb-px text-zinc-200">
+                    <SiTypescript className="text-emerald-400" size={12} />
+                    <span>portfolio.tsx</span>
+                    <span className="ml-2 text-zinc-600">×</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-4 py-2 text-zinc-600">
+                    <SiTypescript size={12} />
+                    <span>projects.ts</span>
+                  </div>
+                </div>
+
+                {/* Breadcrumb */}
+                <div className="px-4 py-1.5 text-xs text-zinc-500 border-b border-zinc-800/60">
+                  src <span className="text-zinc-700">›</span> portfolio.tsx
                 </div>
 
                 {/* Code content */}
-                <div className="p-5 font-mono text-sm md:text-sm space-y-2">
-                  <div className="flex gap-3">
-                    <span className="text-slate-600 select-none">1</span>
-                    <span>
-                      <span className="text-purple-400">import</span>
-                      <span className="text-slate-300"> &#123; </span>
-                      <span className="text-blue-400">Developer</span>
-                      <span className="text-slate-300"> &#125; </span>
-                      <span className="text-purple-400">from</span>
-                      <span className="text-emerald-400"> './portfolio'</span>
-                    </span>
-                  </div>
+                <div className="py-3 leading-7">
+                  {codeLines.map((tokens, i) => {
+                    const active = i === codeLines.length - 1;
+                    return (
+                      <div
+                        key={i}
+                        className={`flex ${active ? "bg-white/[0.04]" : ""}`}
+                      >
+                        <span
+                          className={`w-12 pr-4 text-right select-none ${
+                            active ? "text-zinc-400" : "text-zinc-600"
+                          }`}
+                        >
+                          {i + 1}
+                        </span>
+                        <span className="whitespace-pre text-slate-300">
+                          {tokens.map(([cls, text], j) => (
+                            <span key={j} className={cls}>
+                              {text}
+                            </span>
+                          ))}
+                          {active && (
+                            <span className="inline-block w-2 h-4 -mb-0.5 bg-emerald-400 animate-pulse" />
+                          )}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
 
-                  <div className="flex gap-3">
-                    <span className="text-slate-600 select-none">2</span>
-                    <span className="text-slate-600">&nbsp;</span>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <span className="text-slate-600 select-none">3</span>
-                    <span>
-                      <span className="text-purple-400">const</span>
-                      <span className="text-blue-300"> skills</span>
-                      <span className="text-slate-300"> = [</span>
-                    </span>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <span className="text-slate-600 select-none">4</span>
-                    <span className="pl-4">
-                      <span className="text-emerald-400">'React'</span>
-                      <span className="text-slate-300">, </span>
-                      <span className="text-emerald-400">'TypeScript'</span>
-                      <span className="text-slate-300">,</span>
-                    </span>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <span className="text-slate-600 select-none">5</span>
-                    <span className="pl-4">
-                      <span className="text-emerald-400">'Node.js'</span>
-                      <span className="text-slate-300">, </span>
-                      <span className="text-emerald-400">'Express'</span>
-                      <span className="text-slate-300">,</span>
-                    </span>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <span className="text-slate-600 select-none">6</span>
-                    <span className="pl-4">
-                      <span className="text-emerald-400">'MongoDB'</span>
-                      <span className="text-slate-300">, </span>
-                      <span className="text-emerald-400">'PostgreSQL'</span>
-                    </span>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <span className="text-slate-600 select-none">7</span>
-                    <span className="text-slate-300">]</span>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <span className="text-slate-600 select-none">8</span>
-                    <span className="text-slate-600">&nbsp;</span>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <span className="text-slate-600 select-none">9</span>
-                    <span>
-                      <span className="text-purple-400">export</span>
-                      <span className="text-slate-300"> </span>
-                      <span className="text-purple-400">function</span>
-                      <span className="text-yellow-300">
-                        {" "}
-                        buildAmazingThings
-                      </span>
-                      <span className="text-slate-300">() &#123;</span>
-                    </span>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <span className="text-slate-600 select-none">10</span>
-                    <span className="pl-4">
-                      <span className="text-purple-400">return</span>
-                      <span className="text-slate-300"> </span>
-                      <span className="text-emerald-400">
-                        'Clean code + Great UX'
-                      </span>
-                    </span>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <span className="text-slate-600 select-none">11</span>
-                    <span className="text-slate-300">&#125;</span>
-                  </div>
-
-                  {/* Cursor blink */}
-                  <div className="flex gap-3">
-                    <span className="text-slate-600 select-none">12</span>
-                    <span className="inline-block w-2 h-5 bg-blue-500 animate-pulse" />
-                  </div>
+                {/* Status bar */}
+                <div className="flex items-center justify-between px-4 py-1 text-xs bg-emerald-700 text-emerald-50">
+                  <span>main</span>
+                  <span className="flex gap-4">
+                    <span>Ln {codeLines.length}, Col 1</span>
+                    <span>Spaces: 2</span>
+                    <span>UTF-8</span>
+                    <span>TypeScript React</span>
+                  </span>
                 </div>
               </div>
             </div>

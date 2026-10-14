@@ -25,7 +25,7 @@ const SmallNav: FC<JSX.IntrinsicElements["nav"]> = () => {
   return (
     <nav
       ref={navRef}
-      className="h-0 overflow-hidden lg:hidden block bg-white/95 backdrop-blur-xl dark:bg-slate-900/95 text-slate-600 dark:text-slate-300 transition-all duration-300 border-b border-slate-200 dark:border-slate-800 shadow-lg"
+      className="h-0 overflow-hidden lg:hidden block bg-white/95 backdrop-blur-xl dark:bg-slate-900/95 text-slate-600 dark:text-slate-300 transition-all duration-300 border-b border-slate-200 dark:border-slate-800"
     >
       <div ref={innerRef} className="flex flex-col py-4 px-4">
         {navItems.map((item, index) => (

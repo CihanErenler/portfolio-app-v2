@@ -8,8 +8,8 @@ const SkillCard: FC<SkillCardType & JSX.IntrinsicElements["section"]> = ({
   items,
 }) => {
   return (
-    <section className="min-h-[300px] bg-white flex-1 p-14 relative rounded-2xl border border-slate-200 dark:bg-dark-2 dark:border-dark-3 mb-16 lg:mb-0 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-      <div className="bg-gradient-to-br from-blue-500 to-blue-600 md:w-[90px] md:h-[90px] w-[70px] h-[70px] rounded-2xl flex items-center justify-center absolute md:top-[-50px] top-[-35px] left-1/2 -translate-x-1/2 shadow-lg">
+    <section className="min-h-[300px] bg-white flex-1 p-14 relative rounded-lg border border-slate-200 dark:bg-dark-2 dark:border-dark-3 mb-16 lg:mb-0 shadow-sm transition-all duration-300 ">
+      <div className="bg-emerald-500 text-zinc-950 md:w-[90px] md:h-[90px] w-[70px] h-[70px] rounded-lg flex items-center justify-center absolute md:top-[-50px] top-[-35px] left-1/2 -translate-x-1/2">
         {icon}
       </div>
       <h2 className="text-center mb-5 text-lg text-slate-600 font-bold capitalize dark:text-white">

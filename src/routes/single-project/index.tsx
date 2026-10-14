@@ -48,7 +48,7 @@ const SingleProject: FC<JSX.IntrinsicElements["main"]> = () => {
 
   if (!project) {
     return (
-      <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50/20 dark:from-slate-900 dark:to-blue-950/10">
+      <main className="min-h-screen flex items-center justify-center bg-zinc-50 dark:bg-dark-1">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-slate-800 dark:text-white mb-4">
             Project not found
@@ -60,10 +60,7 @@ const SingleProject: FC<JSX.IntrinsicElements["main"]> = () => {
   }
 
   return (
-    <main className="relative bg-gradient-to-br from-slate-50 via-blue-50/20 to-slate-50 dark:from-slate-900 dark:via-blue-950/10 dark:to-slate-900 min-h-screen page">
-      {/* Subtle gradient orbs */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/5 dark:bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-500/5 dark:bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
+    <main className="relative bg-zinc-50 dark:bg-dark-1 min-h-screen page">
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-8 py-12">
         {/* Back Button */}
@@ -109,7 +106,7 @@ const SingleProject: FC<JSX.IntrinsicElements["main"]> = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mb-12"
         >
-          <div className="w-full aspect-video rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-2xl bg-slate-100 dark:bg-slate-800">
+          <div className="w-full aspect-video rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800">
             <img
               className="w-full h-full object-cover"
               src={project.image}
@@ -206,7 +203,7 @@ const SingleProject: FC<JSX.IntrinsicElements["main"]> = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="bg-white dark:bg-slate-800/50 backdrop-blur-sm border border-slate-200 dark:border-slate-700 rounded-2xl p-6 shadow-lg sticky top-8"
+              className="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 sticky top-8"
             >
               <div className="flex items-center gap-2 mb-4">
                 <FaLayerGroup className="text-blue-600 dark:text-blue-400 text-lg" />

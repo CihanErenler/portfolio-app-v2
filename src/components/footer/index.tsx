@@ -1,12 +1,11 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import { SocialMedia } from "..";
-import { FaCode, FaHeart } from "react-icons/fa6";
+
 
 const Footer: FC<JSX.IntrinsicElements["footer"]> = () => {
   return (
-    <footer className="relative bg-slate-900 dark:bg-slate-950 border-t border-slate-800 py-12">
-      {/* Subtle gradient */}
+    <footer className="relative bg-zinc-950 border-t border-dark-3 py-12">
       <div
         className="absolute inset-0
       pointer-events-none"
@@ -16,19 +15,11 @@ const Footer: FC<JSX.IntrinsicElements["footer"]> = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand Section */}
           <div className="flex flex-col items-center md:items-start">
-            <div className="flex items-center gap-2 mb-3">
-              <div className="bg-gradient-to-br from-blue-600 to-purple-600 p-2 rounded-lg">
-                <FaCode className="text-white text-lg" />
-              </div>
-              <div>
-                <span className="font-bold text-white text-lg">CE</span>
-                <span className="text-slate-400 text-sm ml-1 font-mono">
-                  ./dev
-                </span>
-              </div>
-            </div>
+            <span className="font-mono text-base text-white mb-3">
+              <span className="text-emerald-400">~/</span>cihan
+            </span>
             <p className="text-slate-400 text-sm text-center md:text-left">
-              Building modern web experiences
+              // building for the web
             </p>
           </div>
 
@@ -75,9 +66,7 @@ const Footer: FC<JSX.IntrinsicElements["footer"]> = () => {
               © {new Date().getFullYear()} Cihan Erenler. All rights reserved.
             </p>
             <p className="text-slate-500 text-xs flex items-center gap-1">
-              <span>Built with</span>
-              <FaHeart className="text-red-500 text-xs" />
-              <span>using React & TypeScript</span>
+              <span className="font-mono">built with React + TypeScript</span>
             </p>
           </div>
         </div>

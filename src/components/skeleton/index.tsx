@@ -50,8 +50,8 @@ export const SingleProjectSkeleton: FC = () => {
           <div className="h-4 bg-slate-200 dark:bg-slate-700 rounded w-4/6" />
         </div>
         <div className="flex gap-5 py-3">
-          <div className="h-12 bg-slate-200 dark:bg-slate-700 rounded-full w-40" />
-          <div className="h-12 bg-slate-200 dark:bg-slate-700 rounded-full w-32" />
+          <div className="h-12 bg-slate-200 dark:bg-slate-700 rounded-md w-40" />
+          <div className="h-12 bg-slate-200 dark:bg-slate-700 rounded-md w-32" />
         </div>
       </section>
     </main>

@@ -5,7 +5,7 @@ import { Toaster } from "react-hot-toast";
 
 const App: FC<JSX.IntrinsicElements["main"]> = () => {
   return (
-    <main className="bg-slate-100 dark:bg-zinc-800 min-h-screen">
+    <main className="bg-zinc-50 dark:bg-dark-1 min-h-screen">
       <Toaster
         position="top-right"
         toastOptions={{

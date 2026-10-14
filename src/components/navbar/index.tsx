@@ -6,7 +6,6 @@ import { IoMdMenu } from "react-icons/io";
 import { useAppContext } from "../../hooks";
 import { SocialMedia } from "..";
 import { IoCloseSharp } from "react-icons/io5";
-import { FaCode } from "react-icons/fa6";
 
 const Navbar: FC<JSX.IntrinsicElements["nav"]> = () => {
   const { theme, setTheme, showNav, setShowNav } = useAppContext();
@@ -22,26 +21,19 @@ const Navbar: FC<JSX.IntrinsicElements["nav"]> = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between lg:px-8 px-4 h-16 bg-white/70 backdrop-blur-xl max-w-screen dark:bg-slate-900/70 sticky top-0 z-50 border-b border-slate-200/50 dark:border-slate-800/50">
+    <nav className="flex items-center justify-between lg:px-8 px-4 h-16 bg-zinc-50/80 backdrop-blur-md max-w-screen dark:bg-dark-1/80 sticky top-0 z-50 border-b border-zinc-200 dark:border-dark-3">
       {/* Logo / Brand */}
       <NavLink
         to="/"
         className="flex items-center gap-2 group transition-all duration-300"
       >
-        <div className="relative">
-          <div className="absolute inset-0 bg-blue-600 dark:bg-blue-500 rounded-lg blur-sm opacity-0 group-hover:opacity-30 transition-opacity duration-300" />
-          <div className="relative bg-gradient-to-br from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-500 p-2 rounded-lg">
-            <FaCode className="text-white text-lg" />
-          </div>
-        </div>
-        <div className="hidden sm:block">
-          <span className="font-bold text-slate-900 dark:text-white text-lg">
-            CE
+        <span className="font-mono text-sm md:text-base text-zinc-900 dark:text-zinc-100">
+          <span className="text-emerald-600 dark:text-emerald-400">~/</span>
+          cihan
+          <span className="text-emerald-600 dark:text-emerald-400 animate-pulse">
+            _
           </span>
-          <span className="text-slate-400 dark:text-slate-500 text-sm ml-1 font-mono">
-            ./dev
-          </span>
-        </div>
+        </span>
       </NavLink>
 
       {/* Desktop Navigation */}
@@ -50,7 +42,7 @@ const Navbar: FC<JSX.IntrinsicElements["nav"]> = () => {
           <NavLink
             key={navItem.name}
             to={navItem.path}
-            className="relative px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 rounded-lg group"
+            className="relative px-3 py-2 text-sm font-mono text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 rounded-md group"
           >
             {navItem.name}
             <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 group-[.active]:w-3/4 transition-all duration-300" />

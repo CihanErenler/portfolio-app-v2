@@ -49,7 +49,7 @@ const ContactForm: FC<JSX.IntrinsicElements["form"]> = () => {
 
   return (
     <form
-      className="card hover:shadow-xl transition-shadow duration-300"
+      className="card transition-shadow duration-300"
       onSubmit={(e) => handleSubmit(e)}
     >
       <input

@@ -8,7 +8,7 @@ export const AppProvider = ({ children }: AppProviderType) => {
   const [showNav, setShowNav] = useState<boolean>(false);
 
   useEffect(() => {
-    if (window.matchMedia("(prefer-color-scheme: dark)").matches) {
+    if (!window.matchMedia("(prefers-color-scheme: light)").matches) {
       setTheme("dark");
     } else {
       setTheme("light");

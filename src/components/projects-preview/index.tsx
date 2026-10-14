@@ -8,9 +8,7 @@ const ProjectPreview: FC<
   ProjectPreviewType & JSX.IntrinsicElements["section"]
 > = ({ projects, title }) => {
   return (
-    <section className="relative bg-gradient-to-br from-slate-50 via-blue-50/20 to-slate-50 dark:from-slate-900 dark:via-blue-950/10 dark:to-slate-900 py-16 md:py-20 border-t border-slate-200 dark:border-slate-800">
-      {/* Subtle gradient orb */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/5 dark:bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
+    <section className="relative bg-zinc-50 dark:bg-dark-1 py-16 md:py-20 border-t border-slate-200 dark:border-slate-800">
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
         {/* Section Header */}
@@ -27,7 +25,7 @@ const ProjectPreview: FC<
               &lt;{title.toLowerCase().replace(/\s+/g, "-")}&gt;
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-3">
+          <h2 className="font-mono tracking-tight text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-3">
             {title}
           </h2>
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">

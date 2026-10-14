@@ -15,7 +15,7 @@ const ProjectCard: FC<ProjectCardType> = ({ id, title, desc, image, tags }) => {
   return (
     <article
       onClick={handleNavigation}
-      className="h-full flex flex-col rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer group"
+      className="h-full flex flex-col rounded-lg overflow-hidden border border-zinc-200 dark:border-dark-3 bg-white dark:bg-dark-2 transition-colors duration-200 hover:border-emerald-500/60 dark:hover:border-emerald-500/60 cursor-pointer group"
     >
       {/* Image Container */}
       <div className="relative overflow-hidden aspect-video bg-slate-100 dark:bg-slate-900">
@@ -24,15 +24,15 @@ const ProjectCard: FC<ProjectCardType> = ({ id, title, desc, image, tags }) => {
 
         {/* View Project Button */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 z-20">
-          <div className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white px-4 py-2 rounded-full flex items-center gap-2 text-sm font-semibold shadow-lg">
-            View Project
+          <div className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white px-3 py-1.5 rounded-md flex items-center gap-2 text-xs font-mono font-semibold">
+            $ open project
             <FaArrowRight className="text-xs group-hover:translate-x-1 transition-transform duration-300" />
           </div>
         </div>
 
         {/* Project Image */}
         <img
-          className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
+          className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
           src={image}
           alt={`${title} project screenshot`}
           loading="lazy"
@@ -42,7 +42,7 @@ const ProjectCard: FC<ProjectCardType> = ({ id, title, desc, image, tags }) => {
       {/* Content */}
       <div className="flex-1 flex flex-col p-5">
         {/* Title */}
-        <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2 capitalize group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+        <h3 className="font-mono font-semibold text-base text-slate-900 dark:text-white mb-2 lowercase group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
           {title}
         </h3>
 
