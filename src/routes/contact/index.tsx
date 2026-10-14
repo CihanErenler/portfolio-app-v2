@@ -30,10 +30,7 @@ const Contact: FC<JSX.IntrinsicElements["main"]> = () => {
   ];
 
   return (
-    <main className="relative page bg-gradient-to-br from-slate-50 via-blue-50/20 to-slate-50 dark:from-slate-900 dark:via-blue-950/10 dark:to-slate-900 py-16 min-h-screen flex items-center">
-      {/* Subtle gradient orbs */}
-      <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-blue-500/5 dark:bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-purple-500/5 dark:bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
+    <main className="relative page bg-zinc-50 dark:bg-dark-1 py-16 min-h-screen flex items-center">
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-8 w-full">
         {/* Header Section */}
@@ -63,15 +60,14 @@ const Contact: FC<JSX.IntrinsicElements["main"]> = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-white dark:bg-slate-800/50 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-700 p-8 md:p-12"
+          className="bg-white dark:bg-slate-800/50 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-700 p-8 md:p-12"
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Side - Profile & Info */}
             <div className="text-center md:text-left">
               {/* Profile Image */}
               <div className="relative inline-block mb-6">
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-25" />
-                <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-xl bg-gradient-to-br from-blue-100 to-purple-100 dark:from-slate-800 dark:to-slate-900">
+                <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-lg overflow-hidden border border-zinc-300 dark:border-dark-3 bg-blue-600">
                   <img
                     src={photo}
                     alt="Cihan Erenler profile photo"
@@ -136,7 +132,7 @@ const Contact: FC<JSX.IntrinsicElements["main"]> = () => {
                         ? "noopener noreferrer"
                         : undefined
                     }
-                    className="flex items-center gap-4 p-5 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
+                    className="flex items-center gap-4 p-5 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700  transition-all duration-300 group"
                   >
                     <div
                       className={`p-3 rounded-lg ${

@@ -13,8 +13,21 @@ body *,
 
 html,
 body {
-  @apply font-nunito;
+  @apply font-sans antialiased bg-zinc-50 text-zinc-900 dark:bg-dark-1 dark:text-zinc-200;
   scroll-behavior: smooth;
+}
+
+::selection {
+  @apply bg-emerald-500/30;
+}
+
+/* Subtle dotted grid used behind page sections */
+.bg-grid {
+  background-image: radial-gradient(
+    rgba(113, 113, 122, 0.25) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
 }
 
 .nav-link.active span {
@@ -26,11 +39,11 @@ body {
 }
 
 .icon-button {
-  @apply hover:bg-accent-1 w-10 h-10 flex items-center justify-center rounded-full active:scale-95 transition-transform dark:hover:bg-[#171b20];
+  @apply hover:bg-zinc-200/70 w-10 h-10 flex items-center justify-center rounded-md active:scale-95 transition-colors dark:hover:bg-dark-3;
 }
 
 .btn {
-  @apply min-w-[150px] max-w-[300px] bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-500 hover:to-blue-600 dark:from-blue-600 dark:to-blue-700 dark:hover:from-blue-500 dark:hover:to-blue-600 rounded-full md:h-12 h-10 md:text-lg font-semibold flex items-center justify-center px-5 transition-all duration-300 cursor-pointer active:scale-95 shadow-md hover:shadow-lg hover:-translate-y-0.5;
+  @apply min-w-[150px] max-w-[300px] bg-emerald-500 text-zinc-950 hover:bg-emerald-400 rounded-md md:h-11 h-10 md:text-base text-sm font-mono font-semibold flex items-center justify-center px-5 transition-colors duration-150 cursor-pointer active:scale-[0.98];
 }
 
 .full {
@@ -42,13 +55,13 @@ body {
 }
 
 .filter-button-selected {
-  @apply bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-600 dark:to-blue-700 text-white shadow-md !important;
+  @apply bg-emerald-500 text-zinc-950 !important;
 }
 
 .form-input {
-  @apply block bg-slate-100 w-full p-3 px-5 rounded-lg transition-all duration-200 border border-slate-200 hover:border-blue-300 focus:border-blue-600 dark:focus:border-blue-600 dark:hover:border-blue-300 outline-none focus:shadow-[0px_0px_0px_4px_#bee3f8] mb-5 dark:bg-dark-3 dark:border-slate-700 dark:focus:shadow-[0px_0px_0px_4px_#63B3ED] dark:text-slate-200;
+  @apply block bg-white w-full p-3 px-4 rounded-md font-mono text-sm transition-colors duration-150 border border-zinc-300 hover:border-zinc-400 focus:border-emerald-500 dark:hover:border-zinc-600 dark:focus:border-emerald-500 outline-none focus:ring-2 focus:ring-emerald-500/30 mb-5 dark:bg-dark-2 dark:border-dark-3 dark:text-zinc-200;
 }
 
 .card {
-  @apply bg-white max-w-[1000px] rounded-2xl flex items-center justify-center flex-col m-auto p-8 shadow-lg dark:bg-dark-2 border border-slate-200 dark:border-dark-3 dark:text-slate-300 md:text-lg text-base;
+  @apply bg-white max-w-[1000px] rounded-lg flex items-center justify-center flex-col m-auto p-8 dark:bg-dark-2 border border-zinc-200 dark:border-dark-3 dark:text-zinc-300 md:text-lg text-base;
 }

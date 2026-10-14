@@ -14,14 +14,14 @@ const ProjectFileterButton: FC<
       onClick={() => handleSelect(children)}
       className={`relative rounded-lg py-2.5 px-5 text-sm font-medium transition-all overflow-hidden ${
         isSelected
-          ? "text-white shadow-md"
+          ? "text-white"
           : "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-700"
       }`}
     >
       {isSelected && (
         <motion.div
           layoutId="activeFilter"
-          className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-600 dark:to-blue-700 rounded-lg"
+          className="absolute inset-0 bg-blue-600 rounded-lg"
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
         />
       )}

@@ -20,10 +20,7 @@ const Projects: FC<JSX.IntrinsicElements["main"]> = () => {
   };
 
   return (
-    <main className="relative bg-gradient-to-br from-slate-50 via-blue-50/20 to-slate-50 dark:from-slate-900 dark:via-blue-950/10 dark:to-slate-900 min-h-screen page">
-      {/* Subtle gradient orb */}
-      <div className="absolute top-1/3 right-0 translate-x-1/3 w-[600px] h-[600px] bg-blue-500/5 dark:bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/3 left-0 -translate-x-1/3 w-[600px] h-[600px] bg-purple-500/5 dark:bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
+    <main className="relative bg-zinc-50 dark:bg-dark-1 min-h-screen page">
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 py-16">
         <ScrollTopOnMount />

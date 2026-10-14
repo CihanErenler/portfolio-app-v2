@@ -41,8 +41,8 @@ const NotFound: FC<JSX.IntrinsicElements["main"]> = () => {
           backgroundSize: "24px 24px",
         }}
       ></div>
-      <section className="relative z-10 mx-auto flex w-full max-w-2xl flex-col items-center gap-6 rounded-3xl border border-slate-200 bg-white p-12 text-center shadow-xl dark:border-dark-3 dark:bg-dark-2">
-        <span className="rounded-full border border-slate-200/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-blue-600 dark:border-slate-600/80 dark:text-blue-300">
+      <section className="relative z-10 mx-auto flex w-full max-w-2xl flex-col items-center gap-6 rounded-3xl border border-slate-200 bg-white p-12 text-center dark:border-dark-3 dark:bg-dark-2">
+        <span className="rounded-md border border-slate-200/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-blue-600 dark:border-slate-600/80 dark:text-blue-300">
           {status === 404 ? "Not Found" : "Something Went Wrong"}
         </span>
         <h1 className="text-4xl font-extrabold text-slate-800 md:text-5xl dark:text-white">

@@ -18,10 +18,7 @@ import { motion } from "framer-motion";
 
 const Resume: FC<JSX.IntrinsicElements["main"]> = () => {
   return (
-    <main className="relative page bg-gradient-to-br from-slate-50 via-blue-50/20 to-slate-50 dark:from-slate-900 dark:via-blue-950/10 dark:to-slate-900 py-16">
-      {/* Subtle gradient orbs */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/5 dark:bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-500/5 dark:bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
+    <main className="relative page bg-zinc-50 dark:bg-dark-1 py-16">
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8">
         <ScrollTopOnMount />
@@ -61,15 +58,14 @@ const Resume: FC<JSX.IntrinsicElements["main"]> = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-white dark:bg-slate-800/50 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-700"
+          className="bg-white dark:bg-slate-800/50 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-700"
         >
           {/* Header/Hero Section */}
-          <header className="bg-gradient-to-r from-slate-800 to-slate-900 dark:from-slate-900 dark:to-slate-950 p-8 md:p-12">
+          <header className="bg-zinc-100 dark:bg-dark-1 p-8 md:p-12">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
               {/* Profile Image */}
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-40 transition duration-500" />
-                <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-xl bg-gradient-to-br from-blue-100 to-purple-100 dark:from-slate-800 dark:to-slate-900">
+                <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-lg overflow-hidden border border-zinc-300 dark:border-dark-3 bg-blue-600">
                   <img
                     src={cv.image}
                     alt="Cihan Erenler professional headshot"
@@ -81,23 +77,23 @@ const Resume: FC<JSX.IntrinsicElements["main"]> = () => {
 
               {/* Info */}
               <div className="flex-1 text-center md:text-left">
-                <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                <h1 className="font-mono tracking-tight text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-2">
                   {cv.name}
                 </h1>
-                <p className="text-xl text-slate-300 mb-6">{cv.title}</p>
+                <p className="text-xl text-zinc-600 dark:text-slate-300 mb-6">{cv.title}</p>
 
                 {/* Contact Info */}
                 <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                   <a
                     href={`mailto:${cv.contact.email}`}
-                    className="flex items-center gap-2 text-slate-300 hover:text-blue-400 transition-colors text-sm"
+                    className="flex items-center gap-2 text-zinc-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm"
                   >
                     <MdOutlineEmail size={18} />
                     <span className="hidden sm:inline">{cv.contact.email}</span>
                   </a>
                   <a
                     href={`tel:${cv.contact.phone}`}
-                    className="flex items-center gap-2 text-slate-300 hover:text-blue-400 transition-colors text-sm"
+                    className="flex items-center gap-2 text-zinc-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm"
                   >
                     <MdOutlinePhoneIphone size={18} />
                     <span>{cv.contact.phone}</span>
@@ -106,7 +102,7 @@ const Resume: FC<JSX.IntrinsicElements["main"]> = () => {
                     href={cv.contact.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-slate-300 hover:text-blue-400 transition-colors text-sm"
+                    className="flex items-center gap-2 text-zinc-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm"
                   >
                     <IoLogoLinkedin size={18} />
                     <span className="hidden sm:inline">LinkedIn</span>
@@ -115,7 +111,7 @@ const Resume: FC<JSX.IntrinsicElements["main"]> = () => {
                     href={cv.contact.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-slate-300 hover:text-blue-400 transition-colors text-sm"
+                    className="flex items-center gap-2 text-zinc-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm"
                   >
                     <FaSquareGithub size={18} />
                     <span className="hidden sm:inline">GitHub</span>
