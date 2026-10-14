@@ -13,7 +13,7 @@ import {
   FaScrewdriverWrench,
   FaComments,
 } from "react-icons/fa6";
-import resume from "../../assets/Cihan Erenler CV.pdf";
+import resume from "../../assets/images/Cihan Erenler CV.pdf";
 import { motion } from "framer-motion";
 
 const Resume: FC<JSX.IntrinsicElements["main"]> = () => {
